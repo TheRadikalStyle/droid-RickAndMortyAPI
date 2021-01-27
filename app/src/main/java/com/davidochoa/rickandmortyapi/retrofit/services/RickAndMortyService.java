@@ -10,6 +10,7 @@ import retrofit2.Call;
 import retrofit2.http.Body;
 import retrofit2.http.GET;
 import retrofit2.http.Path;
+import retrofit2.http.Query;
 
 public interface RickAndMortyService {
     @GET("character")
@@ -20,4 +21,7 @@ public interface RickAndMortyService {
 
     @GET("episode/{id}")
     Call<RaMEpisodesModel> getEpisodeDetails(@Path("id") int id);
+
+    @GET("character/")
+    Call<RaMResponseModel> getAllCharactersPagination(@Query("page") int page);
 }
