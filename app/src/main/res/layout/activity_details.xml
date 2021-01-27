@@ -27,7 +27,7 @@
             android:id="@+id/textView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Cargando información"
+            android:text="@string/general_cargando_informacion"
             android:textAlignment="center" />
     </LinearLayout>
 
@@ -35,6 +35,10 @@
         android:id="@+id/details_activity_content"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -53,7 +57,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="0.7"
-                android:text="Name" />
+                android:text="@string/details_static_text_name" />
 
             <TextView
                 android:id="@+id/details_activity_name"
@@ -74,7 +78,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="0.7"
-                android:text="Status" />
+                android:text="@string/details_static_text_status" />
 
             <TextView
                 android:id="@+id/details_activity_status"
@@ -95,7 +99,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="0.7"
-                android:text="Species" />
+                android:text="@string/details_static_text_species" />
 
             <TextView
                 android:id="@+id/details_activity_species"
@@ -116,7 +120,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="0.7"
-                android:text="Type" />
+                android:text="@string/details_static_text_type" />
 
             <TextView
                 android:id="@+id/details_activity_type"
@@ -137,7 +141,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="0.7"
-                android:text="Gender" />
+                android:text="@string/details_static_text_gender" />
 
             <TextView
                 android:id="@+id/details_activity_gender"
@@ -158,7 +162,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="0.7"
-                android:text="Origin" />
+                android:text="@string/details_static_text_origin" />
 
             <TextView
                 android:id="@+id/details_activity_origin"
@@ -179,7 +183,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="0.7"
-                android:text="Location" />
+                android:text="@string/details_static_text_location" />
 
             <TextView
                 android:id="@+id/details_activity_location"
@@ -200,7 +204,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="0.7"
-                android:text="First episode" />
+                android:text="@string/details_static_text_first_episode" />
 
             <TextView
                 android:id="@+id/details_activity_firstepisode"
@@ -221,7 +225,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="0.7"
-                android:text="Air date" />
+                android:text="@string/details_static_text_air_date" />
 
             <TextView
                 android:id="@+id/details_activity_firstepisode_airdate"

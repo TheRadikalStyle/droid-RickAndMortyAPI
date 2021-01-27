@@ -87,7 +87,6 @@ public class DetailsActivity extends AppCompatActivity {
 
     private String GetFirstEpisode(List<String> episode) {
         String firstEpisodeUrl = episode.get(0);
-        Log.d("FisrtEpisode URL", firstEpisodeUrl);
         return firstEpisodeUrl;
     }
 
@@ -129,7 +128,7 @@ public class DetailsActivity extends AppCompatActivity {
         genderTXV.setText(data.gender);
         originTXV.setText(data.origin.name);
         locationTXV.setText(data.location.name);
-        fEpisodeTXV.setText("Loading...");
+        fEpisodeTXV.setText(getResources().getString(R.string.loading));
     }
 
     private void UpdateFirstEpisodeElement(String name, String airdate){
@@ -148,7 +147,7 @@ public class DetailsActivity extends AppCompatActivity {
     }
 
     private void InitError(){
-        Toast.makeText(DetailsActivity.this, "Error de obtención de datos, intenta nuevamente", Toast.LENGTH_SHORT).show();
+        Toast.makeText(DetailsActivity.this, getResources().getString(R.string.error_get_data), Toast.LENGTH_SHORT).show();
         finish();
     }
 

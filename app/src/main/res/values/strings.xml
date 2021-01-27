@@ -1,4 +1,21 @@
 <resources>
     <string name="app_name">RickAndMortyAPI</string>
     <string name="title_activity_details">Detalles</string>
+    <string name="details_static_text_name">Name</string>
+    <string name="details_static_text_status">Status</string>
+    <string name="details_static_text_species">Species</string>
+    <string name="details_static_text_type">Type</string>
+    <string name="details_static_text_gender">Gender</string>
+    <string name="details_static_text_origin">Origin</string>
+    <string name="details_static_text_location">Location</string>
+    <string name="details_static_text_first_episode">First episode</string>
+    <string name="details_static_text_air_date">Air date</string>
+    <string name="general_cargando_informacion">Cargando información</string>
+    <string name="general_exit">Salir</string>
+    <string name="general_exit_question">¿Desea salir de la aplicación?</string>
+    <string name="si">SI</string>
+    <string name="no">NO</string>
+    <string name="loading">Cargando...</string>
+    <string name="error_no_more_data">No se pueden obtener más datos</string>
+    <string name="error_get_data">Ocurrió un error al obtener la información, intenta nuevamente</string>
 </resources>
