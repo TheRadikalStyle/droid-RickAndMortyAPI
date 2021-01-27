@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -14,6 +15,7 @@ import android.widget.Toast;
 import com.davidochoa.rickandmortyapi.retrofit.models.character.RaMSingleCharacterModel;
 import com.davidochoa.rickandmortyapi.retrofit.models.episodes.RaMEpisodesModel;
 import com.davidochoa.rickandmortyapi.retrofit.services.RickAndMortyService;
+import com.squareup.picasso.Picasso;
 
 import java.util.List;
 
@@ -26,6 +28,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 public class DetailsActivity extends AppCompatActivity {
     LinearLayout loadingBox, contentLayout;
     TextView nameTXV, statusTXV, speciesTXV, typeTXV, genderTXV, originTXV, locationTXV, fEpisodeTXV, fEpisodeAirDateTXV;
+    ImageView photoIMV;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -52,6 +55,7 @@ public class DetailsActivity extends AppCompatActivity {
             locationTXV = findViewById(R.id.details_activity_location);
             fEpisodeTXV = findViewById(R.id.details_activity_firstepisode);
             fEpisodeAirDateTXV = findViewById(R.id.details_activity_firstepisode_airdate);
+            photoIMV = findViewById(R.id.details_activity_photo);
 
             GetData(id);
         }else{
@@ -129,6 +133,8 @@ public class DetailsActivity extends AppCompatActivity {
         originTXV.setText(data.origin.name);
         locationTXV.setText(data.location.name);
         fEpisodeTXV.setText(getResources().getString(R.string.loading));
+
+        Picasso.get().load(data.image).into(photoIMV);
     }
 
     private void UpdateFirstEpisodeElement(String name, String airdate){

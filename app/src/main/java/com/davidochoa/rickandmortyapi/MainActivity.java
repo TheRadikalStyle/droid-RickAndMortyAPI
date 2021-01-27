@@ -153,7 +153,7 @@ public class MainActivity extends AppCompatActivity {
     private void Exit(){
         new AlertDialog.Builder(this)
                 .setTitle(getResources().getString(R.string.general_exit))
-                .setMessage(getResources().getString(R.string.general_exit))
+                .setMessage(getResources().getString(R.string.general_exit_question))
                 .setPositiveButton(getResources().getString(R.string.si), new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
