@@ -1,16 +1,17 @@
 package com.davidochoa.rickandmortyapi.recycler;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.davidochoa.rickandmortyapi.DetailsActivity;
 import com.davidochoa.rickandmortyapi.R;
 import com.davidochoa.rickandmortyapi.retrofit.models.RaMResultsModel;
 import com.squareup.picasso.Picasso;
@@ -72,7 +73,13 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.Charac
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(context, "Presionaste ->" + position, Toast.LENGTH_SHORT).show();
+                String url = results.get(position).url;
+                String[] divURL = url.split("/");
+                String charID = divURL[divURL.length - 1];
+
+                Intent intent = new Intent(context, DetailsActivity.class);
+                intent.putExtra("urlCharacter", charID);
+                context.startActivity(intent);
             }
         });
     }
