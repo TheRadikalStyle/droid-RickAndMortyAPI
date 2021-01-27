@@ -2,9 +2,9 @@
 Implementación de RickAndMortyAPI en android para test shopnet
 
 Objetivos
-1.- Utilizar la API "RickAndMortyAPI" (https://rickandmortyapi.com)
-2.- Crear un scroll infinito
-3.- Verisonar código
+- Utilizar la API "RickAndMortyAPI" (https://rickandmortyapi.com)
+- Crear un scroll infinito
+- Verisonar código
 
 
 Librerías usadas
